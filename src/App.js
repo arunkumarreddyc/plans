@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Plans from "./Plans";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="pricing py-5">
+      <div className="container">
+        <div className="row">
+          {/* Free Tier */}
+          <Plans plan="Free" amount="0" noofusers="Single User" storage='5GB' subdomain='Free Subdomain'/>
+          {/* Plus Tier */}
+          <Plans plan="Plus" amount="9" noofusers="5 Users" storage='50GB' subdomain='Free Subdomain' />
+          {/* Pro Tier */}
+          <Plans plan="Pro" amount="49" noofusers="Unlimited Users" storage='150GB' subdomain='Unlimited Free Subdomains' />
+        </div>
+      </div>
+    </section>
   );
 }
 
